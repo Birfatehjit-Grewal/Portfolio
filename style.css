@@ -1,0 +1,236 @@
+header {
+  width: 960px;
+  margin: auto;
+  padding: 20px; /* some padding */
+  text-align: center; /* center the text */
+  background: #535353; /* green background #6bffe1*/
+  color: rgb(121, 190, 255); /* white text color */
+}
+body{
+  margin: 0px;
+  background-color: rgb(161, 161, 161);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Increase the font size of the <h1> element */
+header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.center {
+    width: 960px;
+    margin: auto;
+}
+
+.navbar {
+    overflow: hidden; /* Hide overflow */
+    background-color: #333; /* Dark background color */
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left; /* Make sure that the links stay side-by-side */
+    display: block; /* Change the display to block, for responsive reasons (see below) */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Add some padding */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right; /* Float a link to the right */
+  }
+  
+  /* Change color on hover/mouse-over */
+  .navbar a:hover {
+    background-color: #ddd; /* Grey background color */
+    color: black; /* Black text color */
+  }
+
+  /* Ensure proper sizing */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Column container */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+.aboutme {
+    flex: 70%;
+    max-width: 600px;
+    background-color: #f1f1f1; /* Grey background color */
+    padding: 20px; /* Some padding */
+    align-items: center;
+    flex-direction: column; /* Ensure its children stack vertically */
+    position: relative; /* Set position to relative */
+    min-height: 300px;
+  }
+
+  .links {
+    display: flex; /* Set the container as a flex container */
+    justify-content: space-around; /* Distribute space evenly between flex items */
+    align-items: center; /* Center items vertically */
+    overflow: hidden; /* Hide overflow */
+    background-color: #333;
+    margin: auto;
+    border-radius: 20px;
+    float: inline-start;
+  }
+
+  .education {
+    flex: 80%;
+    max-width: 700px;
+    background-color: #f1f1f1; /* Grey background color */
+    padding: 20px; /* Some padding */
+    align-items: center;
+    flex-direction: column; /* Ensure its children stack vertically */
+  }
+
+  .edu h3{
+    float: left;
+  }
+
+  .edu h3.right{
+    float: right;
+  }
+
+  .education h4{
+    clear: both;
+    padding-left: 20px;
+  }
+
+  .univlogo{
+    width: auto;
+    flex: 20%;
+    max-width: 260px;
+    background-color: #c1c1c1; /* White background color */
+    padding: 0px; /* Some padding */
+  }
+
+  .logoimg {
+    height: auto;
+    width: auto;
+    max-width: 260px;
+    max-height: 200px;
+    background-color: #c1c1c1; /* White background color */
+    padding: 20px; /* Some padding */
+    display: block;
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  .links a {
+    flex: 1; /* Make each link flex-grow equally to take up available space */
+    color: rgb(255, 255, 255); /* White text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Add some padding */
+    text-decoration: none; /* Remove underline */
+  }
+
+.links a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
+  
+  /* Main column */
+.profileimg {
+    flex: 30%;
+    width: 360px;
+    height: 400px;
+    background-color: #c1c1c1; /* White background color */
+    padding: 20px; /* Some padding */
+}
+
+.profileimg1 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #c1c1c1; /* White background color */
+  display: block;
+  margin: 0 auto; /* Center horizontally */
+}
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  footer {
+    width: 960px;
+    margin: auto;
+    padding: 20px; /* Some padding */
+    text-align: center; /* Center text*/
+    background: #535353; /* Grey background */
+  }
+
+.titleheading{
+  background-color: #535353;
+  height: 50px;
+  padding: 5px 5px 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titleheading h2{
+  padding: 0px;
+  font-size: 20px;
+  color: rgb(121, 190, 255);
+  margin: 0 auto;
+  display: block;
+}
+
+.titleheading h3{
+  padding: 0px;
+  font-size: 10px;
+  color: rgb(121, 190, 255);
+  margin: 0 auto;
+  display: block;
+}
+
+.project {
+  flex: 100%;
+  width: 960px;
+  background-color: #f1f1f1; /* Grey background color */
+  padding: 20px; /* Some padding */
+  align-items: center;
+  flex-direction: column; /* Ensure its children stack vertically */
+  border-top: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.project h3{
+  float: left;
+}
+
+.project h3.right{
+  float: right;
+}
+
+
+.projectinfo {
+  display: flex;
+  justify-content: space-between; /* Align items to the start and end of the container */
+  align-items: center; /* Center items vertically */
+  background-color: rgb(190, 190, 190);
+  color: black;
+  height: 30px;
+  padding: 5px 20px 5px 20px; /* Adjusted bottom padding */
+  display: flex; /* Add flexbox */
+  align-items: center; /* Center vertically */
+  width: 920px;
+  margin: auto;
+}
+
+.projectinfo h4{
+  margin: 0;
+}
