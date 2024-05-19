@@ -204,8 +204,8 @@ header h1 {
   padding: 20px; /* Some padding */
   align-items: center;
   flex-direction: column; /* Ensure its children stack vertically */
-  border-top: 1px solid rgb(0, 0, 0);
-  border-bottom: 1px solid rgb(0, 0, 0);
+  border-top: 2px solid rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .project h3{
@@ -233,4 +233,35 @@ header h1 {
 
 .projectinfo h4{
   margin: 0;
+}
+
+.MainImage{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: 1px solid rgb(0, 0, 0);
+
+}
+
+.columns3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Optional: space between columns */
+  width: 100%;
+  columns: 3;
+  column-width: 320px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.SubImage{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.SubImg{
+  background-color: #f1f1f1;
 }
