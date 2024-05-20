@@ -265,3 +265,8 @@ header h1 {
 .SubImg{
   background-color: #f1f1f1;
 }
+
+.mimg h3{
+  text-align: center; /* Center-aligns text within the container */
+  margin: 20px; /* Adds some space around the container */  
+}
