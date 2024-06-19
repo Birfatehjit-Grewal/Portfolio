@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
+<script src="Scripts/StickyNav.js" defer></script>
 </head>
 <header>
   <h1>Birfatehjit Grewal Portfolio</h1>
@@ -12,157 +13,159 @@
 
 <body>
   <div class="center">
-    <div class="navbar" class = "sticky">
+    <div class="navbar" id="navbar">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
-      </div>
+    </div>
   </div>
-  <div class="center">
-    <div class="titleheading">
-      <div>
-        <h2>Personal Projects</h2>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="project">
-        <h3>Personal Portfolio Website</h3>
-        <h3 class="right">Apr 2024 - May 2024</h3>
-        <div class = "projectinfo">
-          <h4>Languages: HTML and CSS</h4>
-          <h4 class = "right"> Applications: VScode</h4>
-        </div>
-        <h4>Description of project:</h4>
-        <p>The personal portfolio website is a personal project done in HTML and CSS
-          which utilized different types of displays in CSS to style the HTML indifferent
-          ways. Flex display was used to create columns and block display was used for images.
-          The website functions as a simple portfolio that displays my past projects and provides
-          access to the source code when possible.
-        </p>
-        <div class = "links">
-          <a href="https://github.com/Birfatehjit-Grewal/Portfolio" target="_blank">Source Code</a>
+  <div class = "content">
+    <div class="center">
+      <div class="titleheading">
+        <div>
+          <h2>Personal Projects</h2>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="project">
-        <h3>PathFinder Web Game</h3>
-        <h3 class="right">Apr 2024 - May 2024</h3>
-        <div class = "projectinfo">
-          <h4>Languages: HTML, CSS and JavaScript</h4>
-          <h4 class = "right"> Applications: VScode</h4>
-        </div>
-        <h4>Description of project:</h4>
-        <p>The game uses HTML canvas components to display the current status of the game. The project innitually used Firebase as a realtime database to store levels but due to some updates
-          the app was no longer able to establish a connection to the database for a Git resposotary so currently to game levels are stored in the JavaScript file that controls the logic behind the game.
-          The JavaScript file updates the canvas periodically showing the current position of the player and the level. Moreover the JavaScript file handles the collisions between the player and objects in the level.
-        </p>
-      </div>
-    </div>
-
-    <div class="titleheading">
-      <div>
-        <h2>Academic Projects</h2>
-      </div>
-      <div>
-        <h3>No Source code is available for Academic Projects as it would go against SFU policies</h3>
-      </div>
-      
-    </div>
-
-    <div class="row">
-      <div class="project">
-        <h3>Uncompressed Tiff image Filter Application</h3>
-        <h3 class="right">Oct 2023 - Nov 2023</h3>
-        <div class = "projectinfo">
-            <h4>Languages: Java</h4>
+      <div class="row">
+        <div class="project">
+          <h3>Personal Portfolio Website</h3>
+          <h3 class="right">Apr 2024 - May 2024</h3>
+          <div class = "projectinfo">
+            <h4>Languages: HTML and CSS</h4>
             <h4 class = "right"> Applications: VScode</h4>
-        </div>
-        <h4>Description of project:</h4>
-        <p> This application uses a GUI created with Java swing which allows the user to apply filters to images.
-          The filters include turning the image into grayscale and making the image Darker. Another filter is dithered image where
-          the grayscale image is made using dithering. Finally an auto level algorithm was used to implement an filter that
-          makes some images look better.
-        </p>
-        <div class="mimg">
-          <h3>GUI Display</h3>
-          <img class="MainImage" src="images/ImageFilter.png" alt="GUI of the TIFF image application">
-        </div>
-        <div class="columns3">
-          <div class = "SubImg">
-            <h3>Dark Filter</h3>
-            <img class="SubImage" src="images/ImageFilterDark.png" alt="Dark Filtered image">
           </div>
-          <div class = "SubImg">
-            <h3>Dittering Filter</h3>
-            <img class="SubImage" src="images/ImageFilterDittered.png" alt="Dark Filtered image">
-          </div>
-          <div class = "SubImg">
-            <h3>AutoLevel Filter</h3>
-            <img class="SubImage" src="images/ImageFilterAutoLevel.png" alt="Dark Filtered image">
+          <h4>Description of project:</h4>
+          <p>The personal portfolio website is a personal project done in HTML and CSS
+            which utilized different types of displays in CSS to style the HTML indifferent
+            ways. Flex display was used to create columns and block display was used for images.
+            The website functions as a simple portfolio that displays my past projects and provides
+            access to the source code when possible.
+          </p>
+          <div class = "links">
+            <a href="https://github.com/Birfatehjit-Grewal/Portfolio" target="_blank">Source Code</a>
           </div>
         </div>
-
-
       </div>
-    </div>
 
-    <div class="row">
-      <div class="project">
-        <h3>Wav file display Application</h3>
-        <h3 class="right">Oct 2023 - Nov 2023</h3>
-        <div class = "projectinfo">
-            <h4>Languages: Java</h4>
+      <div class="row">
+        <div class="project">
+          <h3>PathFinder Web Game</h3>
+          <h3 class="right">Apr 2024 - May 2024</h3>
+          <div class = "projectinfo">
+            <h4>Languages: HTML, CSS and JavaScript</h4>
             <h4 class = "right"> Applications: VScode</h4>
-        </div>
-        <h4>Description of project:</h4>
-        <p> This application uses a GUI created with Java swing which allows the user to open a wav file and display it as a graph.
-          The open file GUI filters out all files thats are not wav file or directories to make chosing the file easy.
-          The application reads the file and extracts information like the number of smaples, the sample frequency and the left and right channels.
-          The GUI uses a scaling to plot the wav file each of the channels.
-        </p>
-        <div class="mimg">
-          <h3>GUI Display</h3>
-          <img class="MainImage" src="images/WAVPlotter.png" alt="GUI of the WAV file plotter application">
+          </div>
+          <h4>Description of project:</h4>
+          <p>The game uses HTML canvas components to display the current status of the game. The project innitually used Firebase as a realtime database to store levels but due to some updates
+            the app was no longer able to establish a connection to the database for a Git resposotary so currently to game levels are stored in the JavaScript file that controls the logic behind the game.
+            The JavaScript file updates the canvas periodically showing the current position of the player and the level. Moreover the JavaScript file handles the collisions between the player and objects in the level.
+          </p>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="project">
-        <h3>SQLite Library Database Application</h3>
-        <h3 class="right">Jul 2023 - Aug 2023</h3>
-        <div class = "projectinfo">
-            <h4>Languages: Python and SQLite</h4>
-            <h4 class = "right"> Applications: IDLE(Python 3.9 64 bits) and Jupyter Notebook</h4>
+      <div class="titleheading">
+        <div>
+          <h2>Academic Projects</h2>
         </div>
-        <h4>Description of project:</h4>
-        <p> This is a command line app which simulates a library database. The users can use this to find items like CDs or books that are currently in stock
-          or find information about the availablity of items. The user can then borrow the item which will mark that item as unavailable. The application also allows the user to
-          reserve a event room and register for events. Information like the availablity of items, who has borrowed which item and what rooms have been booked
-          are stored in a SQLite database. This database is queried for the app features like checking the users currently borrowed items and returning items to the library. 
-        </p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="project">
-        <h3>Word Sudoku Android App</h3>
-        <h3 class="right">Sep 2023 - Dec 2022</h3>
-        <div class = "projectinfo">
-            <h4>Languages: Java</h4>
-            <h4 class = "right"> Applications: Android Studio and Git</h4>
+        <div>
+          <h3>No Source code is available for Academic Projects as it would go against SFU policies</h3>
         </div>
-        <h4>Description of project:</h4>
-        <p> I developed a Word Sudoku App using Android Studio which helps learn a second language through a sudoku game. The 
-          app includes different size grids and 2 modes. The modes signify if the board will have numbers and will pronunce the word when clicked
-          or if the board will have french words on it and the user will need to translate them to solve the Sudoku. The development process involved using Git
-          for version controll and JUint was used to create unit tests to test the functions of the app. Moreover, manual testing was done to test the user interface.  
-        </p>
-      </div>
-    </div>
 
+      </div>
+
+      <div class="row">
+        <div class="project">
+          <h3>Uncompressed Tiff image Filter Application</h3>
+          <h3 class="right">Oct 2023 - Nov 2023</h3>
+          <div class = "projectinfo">
+              <h4>Languages: Java</h4>
+              <h4 class = "right"> Applications: VScode</h4>
+          </div>
+          <h4>Description of project:</h4>
+          <p> This application uses a GUI created with Java swing which allows the user to apply filters to images.
+            The filters include turning the image into grayscale and making the image Darker. Another filter is dithered image where
+            the grayscale image is made using dithering. Finally an auto level algorithm was used to implement an filter that
+            makes some images look better.
+          </p>
+          <div class="mimg">
+            <h3>GUI Display</h3>
+            <img class="MainImage" src="images/ImageFilter.png" alt="GUI of the TIFF image application">
+          </div>
+          <div class="columns3">
+            <div class = "SubImg">
+              <h3>Dark Filter</h3>
+              <img class="SubImage" src="images/ImageFilterDark.png" alt="Dark Filtered image">
+            </div>
+            <div class = "SubImg">
+              <h3>Dittering Filter</h3>
+              <img class="SubImage" src="images/ImageFilterDittered.png" alt="Dark Filtered image">
+            </div>
+            <div class = "SubImg">
+              <h3>AutoLevel Filter</h3>
+              <img class="SubImage" src="images/ImageFilterAutoLevel.png" alt="Dark Filtered image">
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="project">
+          <h3>Wav file display Application</h3>
+          <h3 class="right">Oct 2023 - Nov 2023</h3>
+          <div class = "projectinfo">
+              <h4>Languages: Java</h4>
+              <h4 class = "right"> Applications: VScode</h4>
+          </div>
+          <h4>Description of project:</h4>
+          <p> This application uses a GUI created with Java swing which allows the user to open a wav file and display it as a graph.
+            The open file GUI filters out all files thats are not wav file or directories to make chosing the file easy.
+            The application reads the file and extracts information like the number of smaples, the sample frequency and the left and right channels.
+            The GUI uses a scaling to plot the wav file each of the channels.
+          </p>
+          <div class="mimg">
+            <h3>GUI Display</h3>
+            <img class="MainImage" src="images/WAVPlotter.png" alt="GUI of the WAV file plotter application">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="project">
+          <h3>SQLite Library Database Application</h3>
+          <h3 class="right">Jul 2023 - Aug 2023</h3>
+          <div class = "projectinfo">
+              <h4>Languages: Python and SQLite</h4>
+              <h4 class = "right"> Applications: IDLE(Python 3.9 64 bits) and Jupyter Notebook</h4>
+          </div>
+          <h4>Description of project:</h4>
+          <p> This is a command line app which simulates a library database. The users can use this to find items like CDs or books that are currently in stock
+            or find information about the availablity of items. The user can then borrow the item which will mark that item as unavailable. The application also allows the user to
+            reserve a event room and register for events. Information like the availablity of items, who has borrowed which item and what rooms have been booked
+            are stored in a SQLite database. This database is queried for the app features like checking the users currently borrowed items and returning items to the library. 
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="project">
+          <h3>Word Sudoku Android App</h3>
+          <h3 class="right">Sep 2023 - Dec 2022</h3>
+          <div class = "projectinfo">
+              <h4>Languages: Java</h4>
+              <h4 class = "right"> Applications: Android Studio and Git</h4>
+          </div>
+          <h4>Description of project:</h4>
+          <p> I developed a Word Sudoku App using Android Studio which helps learn a second language through a sudoku game. The 
+            app includes different size grids and 2 modes. The modes signify if the board will have numbers and will pronunce the word when clicked
+            or if the board will have french words on it and the user will need to translate them to solve the Sudoku. The development process involved using Git
+            for version controll and JUint was used to create unit tests to test the functions of the app. Moreover, manual testing was done to test the user interface.  
+          </p>
+        </div>
+      </div>
+
+    </div>
   </div>
 </body>
 <footer>
