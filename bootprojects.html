@@ -1,0 +1,672 @@
+<html lang="en">
+    <head>
+      <title>Project Portfolio</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body class="bg-dark" style="--bs-bg-opacity: .9;">
+        <div class="container" style="max-width: 1200px;">
+            <div class="container bg-dark">
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                    <div class="container" style="max-width: 1200px;">
+                        <a class="navbar-brand" href="boot.html">
+                            <img src="images/WEBSITE_LOGO.png" alt="Logo" width="30" height="24">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                            MENU
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="bootprojects.html">Projects</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="container-fluid ms-0 me-0 pt-5 py-2 bg-dark text-white">
+                <h1 class="text-center">Projects</h1>
+            </div>
+        
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .9;">
+                <div class="col-sm-4 border-end border-dark">
+                    <div class="row me-0 ms-0 ps-0">
+                        <div class="col-sm-12 ps-0">
+                            <h5>Image feature Matching</h5>
+                        </div>
+                        <div class="col-sm-12 ps-0">
+                            <p class="text-start fs-6">Mar 2025</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Programming Languages:</span> Python
+                        </p>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Applications:</span> VScode</p>
+                    </div>
+
+                    <p class="text-start text-danger"> The Source Code is not public due to SFU policy</p>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="ps-3">
+                        <h5>Project Description:</h5>
+                        <p class="text-start fs-6">
+                            The program uses FAST detectors to get key points in images and creates BRIEF descriptors for each point. The keypoints are then compared with the keypoints in a second image using the descriptors to match points. The matched points are used to compute a homography matrix using RANSAC and normilization. The matrix can then be used to map another image on to the instance of the object in the first image.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div id="project12" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#project12" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#project12" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#project12" data-bs-slide-to="2"></button>
+                        </div>
+                      
+                        <div class="carousel-inner" style="height: 300px;">
+                          <div class="carousel-item active h-100">
+                            <img src="images/visualize_homography_cv_ransac.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/visualize_homography_pano_ransac.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/composite_harry_potter.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#project12" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#project12" data-bs-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .8;">
+                <div class="col-sm-4 border-end border-dark">
+                    <div class="row me-0 ms-0 ps-0">
+                        <div class="col-sm-12 ps-0">
+                            <h5>Plane Image Segmentation Model</h5>
+                        </div>
+                        <div class="col-sm-12 ps-0">
+                            <p class="text-start fs-6">Mar 2025</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Programming Languages:</span> Python
+                        </p>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Applications:</span> VScode</p>
+                    </div>
+
+                    <p class="text-start text-danger"> The Source Code is not public due to SFU policy</p>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="ps-3">
+                        <h5>Project Description:</h5>
+                        <p class="text-start fs-6">
+                            The segmentation model involves 2 models. The first model uses <span class="fw-bold">faster_rcnn_R_101_FPN_3x.yaml</span> pretrained model from detection2 library along with additional training for detecting planes from a dataset. This model finds instances of planes in images which are input into the neuron network model which segments the plane from the background. Combined together the models create a segmentation mask for the planes in an input image.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div id="project11" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#project11" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#project11" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#project11" data-bs-slide-to="2"></button>
+                        </div>
+                      
+                        <div class="carousel-inner" style="height: 300px;">
+                          <div class="carousel-item active h-100">
+                            <img src="images/Part_1_After_Inprovements_3.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/Part_2_instance_2.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/Part_3_segmentation_P0168.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#project11" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#project11" data-bs-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .9;">
+                <div class="col-sm-4 border-end border-dark">
+                    <div class="row me-0 ms-0 ps-0">
+                        <div class="col-sm-12 ps-0">
+                            <h5>RDT Protocol</h5>
+                        </div>
+                        <div class="col-sm-12 ps-0">
+                            <p class="text-start fs-6">Nov 2024</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Programming Languages:</span> Python
+                        </p>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Applications:</span> VScode</p>
+                    </div>
+
+                    <a href="https://github.com/Birfatehjit-Grewal/RDT_Protocol" class="btn  rounded bg-dark text-white" style="--bs-bg-opacity: .8;">Source Code</a>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="ps-3">
+                        <h5>Project Description:</h5>
+                        <p class="text-start fs-6">
+                            This protocol implements a connection-oriented, reliable, pipelined data transfer protocol which includes flow control and congestion control mechanisms. The protocol using UDP sockets as a base and add features like 3-way hand handshake, Loss recovery through retransmission with a timeout and fast retransmission using duplicate ACKs. I also implemented a checksum in case of bit flips. The flow control is handled by reading the available buffer space in the response and limiting the sent packets to avoid overflow. I use slow-start congestion control as my congestion control mechanism.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div id="project10">
+                        <div class="h-100">
+                            <img src="images/Python_Logo.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .8;">
+                <div class="col-sm-4 border-end border-dark">
+                    <div class="row me-0 ms-0 ps-0">
+                        <div class="col-sm-12 ps-0">
+                            <h5>Simple Web/Web Proxy Server</h5>
+                        </div>
+                        <div class="col-sm-12 ps-0">
+                            <p class="text-start fs-6">Oct 2024</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Programming Languages:</span> Python
+                        </p>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Applications:</span> VScode</p>
+                    </div>
+
+                    <a href="https://github.com/Birfatehjit-Grewal/Simple_Web_Server" class="btn  rounded bg-dark text-white" style="--bs-bg-opacity: .8;">Source Code</a>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="ps-3">
+                        <h5>Project Description:</h5>
+                        <p class="text-start fs-6">
+                            This project includes 2 servers created using socket programming. The servers implemented basic HTTP Methods and messages. The servers can produce the following codes 200 OK, 304 Not Modified, 400 Bad Request, 404 Not Found, and 501 Not Implemented. The response is based on the RFC7231. The proxy server reduces the workload of the main server by caching the response for get requests by requesting the document from the main server as a conditional get request based on the cached file already in the proxy server.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div id="project9">
+                        <div class="h-100">
+                            <img src="images/Python_Logo.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .9;">
+                <div class="col-sm-4 border-end border-dark">
+                    <div class="row me-0 ms-0 ps-0">
+                        <div class="col-sm-12 ps-0">
+                            <h5>Local Treasury</h5>
+                        </div>
+                        <div class="col-sm-12 ps-0">
+                            <p class="text-start fs-6">Oct 2024 - Dec 2024</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Programming Languages:</span> Kotlin
+                        </p>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Applications:</span> Android Studio and FireBase</p>
+                    </div>
+
+                    <a href="https://github.com/Birfatehjit-Grewal/Local_Treasury" class="btn  rounded bg-dark text-white" style="--bs-bg-opacity: .8;">Source Code</a>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="ps-3">
+                        <h5>Project Description:</h5>
+                        <p class="text-start fs-6">
+                            Local Treasury is a Android application built using Kotlin and FireBase which allows users to post items in a marketplace. It offers a realtime chat feature using FireBase Authentication for account differentiation and uses FireBase database to store past chats. Account require a email verification before the account is created. The posts are stored in the FireBase Database while the images associated with the posts are stored in the FireBase Storage and accessed using Glide.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div id="project8" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#project8" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#project8" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#project8" data-bs-slide-to="2"></button>
+                        </div>
+                      
+                        <div class="carousel-inner" style="height: 300px;">
+                          <div class="carousel-item active h-100">
+                            <img src="images/Local_Treasury_LOGO.png" class="d-block w-100 object-fit-contain" style="max-height: 100%; max-width: 100%; object-fit: contain;"">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/Local_Treasury_Home_Screen.png" class="d-block w-100 object-fit-contain" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/FireBase_Glide.png" class="d-block w-100 object-fit-contain" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#project8" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#project8" data-bs-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .8;">
+                <div class="col-sm-4 border-end border-dark">
+                    <div class="row me-0 ms-0 ps-0">
+                        <div class="col-sm-12 ps-0">
+                            <h5>Climate Change Prediction Model</h5>
+                        </div>
+                        <div class="col-sm-12 ps-0">
+                            <p class="text-start fs-6">Sep 2024 - Dec 2024</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Programming Languages:</span> Python
+                        </p>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Applications:</span> VScode</p>
+                    </div>
+
+                    <a href="https://github.com/Birfatehjit-Grewal/Climate_Change_Prediction_Model" class="btn  rounded bg-dark text-white" style="--bs-bg-opacity: .8;">Source Code</a>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="ps-3">
+                        <h5>Project Description:</h5>
+                        <p class="text-start fs-6">
+                            The prediction model is trained on collected datasets for population, GDP per capita, CO2 Emissions, and weather for 60 regions. The regions include the capital cities in Canadian provinces and state capitals in the United States of America. The dataset were combined and transformed using Pandas library to obtain the desired input features for model training. The machine learning model was constructed using Scikit-Learn and predicts the temperature using the input features.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div id="project7">
+                        <div class="h-100">
+                            <img src="images/Python_Logo.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .9;">
+                <div class="col-sm-4 border-end border-dark">
+                    <div class="row me-0 ms-0 ps-0">
+                        <div class="col-sm-12 ps-0">
+                            <h5>Task Scheduler</h5>
+                        </div>
+                        <div class="col-sm-12 ps-0">
+                            <p class="text-start fs-6">Jun 2024</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Programming Languages:</span> Python
+                        </p>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Applications:</span> PyCharm</p>
+                    </div>
+
+                    <a href="https://github.com/Birfatehjit-Grewal/TaskScheduler" class="btn  rounded bg-dark text-white" style="--bs-bg-opacity: .8;">Source Code</a>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="ps-3">
+                        <h5>Project Description:</h5>
+                        <p class="text-start fs-6">
+                            The Task Scheduler is a personal project done in Python which utilized the PyQt6 library to create the graphical user interface. The application uses a SQLite Database to store the tasks and queries the database to extract the tasks that need to be displayed.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div id="project6" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#project6" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#project6" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#project6" data-bs-slide-to="2"></button>
+                        </div>
+                      
+                        <div class="carousel-inner" style="height: 300px;">
+                          <div class="carousel-item active h-100">
+                            <img src="images/TaskScheduler_Today.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/TaskScheduler_Custom.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/Python_Logo.png" class="d-block w-100 object-fit-contain" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#project6" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#project6" data-bs-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .8;">
+                <div class="col-sm-4 border-end border-dark">
+                    <div class="row me-0 ms-0 ps-0">
+                        <div class="col-sm-12 ps-0">
+                            <h5>Personal Portfolio Website</h5>
+                        </div>
+                        <div class="col-sm-12 ps-0">
+                            <p class="text-start fs-6">Apr 2024 - May 2024</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Programming Languages:</span> HTML, CSS, and Bootstrap-5
+                        </p>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Applications:</span> VScode</p>
+                    </div>
+
+                    <a href="https://github.com/Birfatehjit-Grewal/Portfolio" class="btn  rounded bg-dark text-white" style="--bs-bg-opacity: .8;">Source Code</a>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="ps-3">
+                        <h5>Project Description:</h5>
+                        <p class="text-start fs-6">
+                            The personal portfolio website is a personal project done in HTML and CSS which utilized different types of displays in CSS to style the HTML indifferent ways. Flex display was used to create columns and block display was used for images. The website functions as a simple portfolio that displays my past projects and provides access to the source code when possible.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div id="project5">
+                        <div class="h-100">
+                            <img src="images/WEBSITE_LOGO.png" alt="Website Logo With B.G." class="d-block w-100 object-fit-cover">
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .9;">
+                <div class="col-sm-4 border-end border-dark">
+                    <div class="row me-0 ms-0 ps-0">
+                        <div class="col-sm-12 ps-0">
+                            <h5>Uncompressed Tiff image Filter Application</h5>
+                        </div>
+                        <div class="col-sm-12 ps-0">
+                            <p class="text-start fs-6">Oct 2023 - Nov 2023</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Programming Languages:</span> Java
+                        </p>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Applications:</span> VScode</p>
+                    </div>
+
+                    <a href="https://github.com/Birfatehjit-Grewal/Tiff_Image_Filter" class="btn  rounded bg-dark text-white" style="--bs-bg-opacity: .8;">Source Code</a>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="ps-3">
+                        <h5>Project Description:</h5>
+                        <p class="text-start fs-6">
+                            This application uses a GUI created with Java swing which allows the user to apply filters to images. The filters include turning the image into grayscale and making the image Darker. Another filter is dithered image where the grayscale image is made using dithering. Finally an auto level algorithm was used to implement an filter that makes some images look better.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div id="project4" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#project4" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#project4" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#project4" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#project4" data-bs-slide-to="3"></button>
+                        </div>
+                      
+                        <div class="carousel-inner" style="height: 300px;">
+                          <div class="carousel-item active h-100">
+                            <img src="images/ImageFilter.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/ImageFilterAutoLevel.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/ImageFilterDark.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/ImageFilterDittered.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#project4" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#project4" data-bs-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .8;">
+                <div class="col-sm-4 border-end border-dark">
+                    <div class="row me-0 ms-0 ps-0">
+                        <div class="col-sm-12 ps-0">
+                            <h5>Wav file Display Application</h5>
+                        </div>
+                        <div class="col-sm-12 ps-0">
+                            <p class="text-start fs-6">Oct 2023 - Nov 2023</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Programming Languages:</span> Java
+                        </p>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Applications:</span> VScode</p>
+                    </div>
+
+                    <a href="https://github.com/Birfatehjit-Grewal/Wav_file_Display" class="btn  rounded bg-dark text-white" style="--bs-bg-opacity: .8;">Source Code</a>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="ps-3">
+                        <h5>Project Description:</h5>
+                        <p class="text-start fs-6">
+                            This application uses a GUI created with Java swing which allows the user to open a wav file and display it as a graph. The open file GUI filters out all files thats are not wav file or directories to make chosing the file easy. The application reads the file and extracts information like the number of smaples, the sample frequency and the left and right channels. The GUI uses a scaling to plot the wav file each of the channels.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div id="project3" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#project3" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#project3" data-bs-slide-to="1"></button>
+                        </div>
+                      
+                        <div class="carousel-inner" style="height: 300px;">
+                          <div class="carousel-item active h-100">
+                            <img src="images/WAVPlotter.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/Python_Logo.png" class="d-block w-100 object-fit-contain" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#project3" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#project3" data-bs-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .9;">
+                <div class="col-sm-4 border-end border-dark">
+                    <div class="row me-0 ms-0 ps-0">
+                        <div class="col-sm-12 ps-0">
+                            <h5>SQLite Library Database Application</h5>
+                        </div>
+                        <div class="col-sm-12 ps-0">
+                            <p class="text-start fs-6">Jul 2023 - Aug 2023</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Programming Languages:</span> Python and SQLite
+                        </p>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Applications:</span> IDLE(Python 3.9 64 bits) and Jupyter Notebook</p>
+                    </div>
+
+                    <a href="https://github.com/Birfatehjit-Grewal/SQLite_Library_Database" class="btn  rounded bg-dark text-white" style="--bs-bg-opacity: .8;">Source Code</a>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="ps-3">
+                        <h5>Project Description:</h5>
+                        <p class="text-start fs-6">
+                            This is a command line app which simulates a library database. The users can use this to find items like CDs or books that are currently in stock or find information about the availability of items. The user can then borrow the item which will mark that item as unavailable. The application also allows the user to reserve a event room and register for events. Information like the availability of items, who has borrowed which item and what rooms have been booked are stored in a SQLite database. This database is queried for the app features like checking the users currently borrowed items and returning items to the library.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div id="project2">
+                        <div class="h-100">
+                            <img src="images/Python_Logo.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .8;">
+                <div class="col-sm-4 border-end border-dark">
+                    <div class="row me-0 ms-0 ps-0">
+                        <div class="col-sm-12 ps-0">
+                            <h5>Word Sudoku Android App</h5>
+                        </div>
+                        <div class="col-sm-12 ps-0">
+                            <p class="text-start fs-6">Sep 2022 - Dec 2022</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Programming Languages:</span> Java
+                        </p>
+                        <p class="text-start fs-6">
+                            <span class="fw-bold">Applications:</span> Android Studio and Git</p>
+                    </div>
+
+                    <a href="https://github.com/Birfatehjit-Grewal/Word_Sudoku" class="btn  rounded bg-dark text-white" style="--bs-bg-opacity: .8;">Source Code</a>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="ps-3">
+                        <h5>Project Description:</h5>
+                        <p class="text-start fs-6">
+                            I developed a Word Sudoku App using Android Studio which helps learn a second language through a sudoku game. The app includes different size grids and 2 modes. The modes signify if the board will have numbers and will pronounce the word when clicked or if the board will have French words on it and the user will need to translate them to solve the Sudoku. The development process involved using Git for version control and JUint was used to create unit tests to test the functions of the app. Moreover, manual testing was done to test the user interface.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 p-2">
+                    <div id="project1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#project1" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#project1" data-bs-slide-to="1"></button>
+                        </div>
+                      
+                        <div class="carousel-inner" style="height: 300px;">
+                          <div class="carousel-item active h-100">
+                            <img src="images/Word_sudoku_Grid_Size.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/Word_sudoku_Tablet.png" class="d-block w-100 object-fit-cover">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#project1" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#project1" data-bs-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            
+
+        </div>
+    </body>
+</html>
