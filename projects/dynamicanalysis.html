@@ -1,0 +1,124 @@
+<html lang="en">
+    <head>
+      <title>Dynamic Analysis</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body class="bg-dark" style="--bs-bg-opacity: .9;">
+        <div class="container-fluid bg-dark">
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="container-fluid" style="max-width: 1200px;">
+              <a class="navbar-brand" href="index.html">
+                <img src="../images/WEBSITE_LOGO.png" alt="Logo" width="30" height="24">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                MENU
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../bootprojects.html">Projects</a>
+                </li>
+              </ul>
+              </div>
+            </div>
+          </nav>
+
+        </div>
+
+        <div class="container-fluid mt-0 mb-0">
+            <div class="container-fluid bg-dark mt-0 mb-0" style="max-width: 1200px;">
+                <H1 class="text-white text-center mt-0 mb-0">Dynamic Analysis</H1>
+            </div>
+            <div class="container-fluid mt-0 mb-0" style="max-width: 1200px;">
+                <div class="row">
+                    <div class="col-sm-8 container-fluid bg-light mt-0 mb-0 pb-3 pt-3" style="max-width: 1200px; --bs-bg-opacity:1;">
+                        <h2 class="mt-0 mb-0">Project Summary</h2>
+                        <p class="mt-0 mb-0">Programming Language: C++</p>
+                        <span class="mt-0 mb-0 pb-3">Libraries/Frameworks: <a href="https://llvm.org/">LLVM</a></span>
+                    </div>
+                    <div class="col-sm-4 container-fluid bg-light mt-0 mb-0 pb-3 pt-3 d-flex justify-content-center" style="max-width: 1200px; --bs-bg-opacity:1; margin: auto;">
+                        <a href="https://github.com/Birfatehjit-Grewal/Dynamic_Analysis.git" class="btn btn-dark d-flex align-items-center justify-content-center text-center fw-bold">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+            <div class="container-fluid bg-light mt-0 mb-0 pb-3" style="max-width: 1200px; --bs-bg-opacity:.8;">
+                <h3 class="mt-0 mb-0">Project Description</h3>
+                <span class="mt-0 mb-0"> This project implements a dynamic fault-tolerant analysis for C/C++ programs by instrumenting LLVM IR 
+                    with runtime safety checks. The goal is to detect and mitigate common memory and arithmetic errors—such as invalid pointer accesses, 
+                    invalid frees, and divide-by-zero operations—while maintaining program availability under different quality-of-service (QoS) policies.
+                </span>
+                <div class="container-fluid mt-0 mb-0 ps-0">
+                    <h4 class=" mt-0 mb-0">Errors Handled</h4> 
+                    <span class="mt-0 mb-0">This instrumentation is not all inclusive and only handles the following errors.
+                    </span>
+                    <ul>
+                        <li>Error: Invalid read from memory</li>
+                        <li>Error: Invalid write to memory</li>
+                        <li>Error: Invalid free of memory</li>
+                        <li>Error: Division by zero</li>
+                    </ul>
+
+                    <h4 class=" mt-0 mb-0">Limitations</h4> 
+                    <span class="mt-0 mb-0">This instrumentation limitations are listed below.
+                    </span>
+                    <ul>
+                        <li>Assumed that all heap memory will be allocated via a call to malloc().</li>
+                        <li>Assumed allocated heap memory will only be freed via a call to free()</li>
+                    </ul>
+
+                    <h4 class=" mt-0 mb-0">Implementation</h4> 
+                    <span class="mt-0 mb-0">The implementation for the error handleing is seperated into 4 parts. Depending on which flag is used to run the program.
+                    </span>
+                    <ul>
+                        <li>Base</li>
+                        <li>-ignore</li>
+                        <li>-defaults</li>
+                        <li>-returns</li>
+                    </ul>
+
+                    <h4 class=" mt-0 mb-0">Base</h4> 
+                    <span class="mt-0 mb-0">The base implementation for the error handleing logs the error into terminal and exits the program. The memory errors are tracked useing <strong>Shadow Memory</strong> to keep
+                         track of memory allocations for both spatial and temporal safety. The logging can result in the following outputs.
+                    </span>
+                    <ul>
+                        <li>Found: Invalid read from memory</li>
+                        <li>Found: Invalid write to memory</li>
+                        <li>Found: Invalid free of memory</li>
+                        <li>Found: Division by zero</li>
+                    </ul>
+
+                    <h4 class=" mt-0 mb-0">Ignore</h4> 
+                    <span class="mt-0 mb-0">The ignore implementation for the error handleing builds off the base implementation. Instead of exiting when encountering the Invalid write to memory and 
+                        Invalid free of memory the instructions are skipped allowing the program to continue running. This is possible because freeing memory that has not been allocated or writing 
+                        to memory that is not valid can be skipped without consequences since they don't return any values.
+                    </span>
+
+                    <h4 class=" mt-0 mb-0">Defaults</h4> 
+                    <span class="mt-0 mb-0">The defaults implementation for the error handleing builds off the Ignore implementation. Instead of exiting when encountering the Invalid read from memory and 
+                        Division by zero we instead replace there return value with a default 0 allowing the program to continue running eventhough its values might not be correct.
+                    </span>
+
+                    <h4 class=" mt-0 mb-0">Returns</h4> 
+                    <span class="mt-0 mb-0">The Returns implementation for the error handleing builds off the Base implementation. Where instead of exiting when encountering the errors we instead 
+                        return the entire function with a default value depending on the return type of the function.
+                    </span>
+
+
+                    
+                </div>
+
+            
+            </div>
+        </div>
+    </body>
+</html>
