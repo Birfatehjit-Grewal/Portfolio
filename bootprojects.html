@@ -64,138 +64,34 @@
                     </div>
                 </div>
             </a>
+            <a href="projects/imagefeaturematching.html" class="text-decoration-none text-black">
+                <div class="container-fluid bg-light ps-0 pe-0 ms-0 me-0" style="--bs-bg-opacity: .8;">
+                    <div class="row me-0 ms-0 ps-0 pe-0 border-dark border-bottom">
+                        <div class="col-sm-8">
+                            <h3>Image feature Matching</h3>
+                            <p class="text-start fs-6">Programming Language: Python</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3>Mar 2025</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="projects/planesegmentationmodel.html" class="text-decoration-none text-black">
+                <div class="container-fluid bg-light ps-0 pe-0 ms-0 me-0" style="--bs-bg-opacity: .9;">
+                    <div class="row me-0 ms-0 ps-0 pe-0 border-dark border-bottom">
+                        <div class="col-sm-8">
+                            <h3>Plane Image Segmentation Model</h3>
+                            <p class="text-start fs-6">Programming Language: Python</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3>Mar 2025</h3>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
-        
-            <!-------------------------------------------------------------------------------------------------------->
-            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .9; max-width: 1200px;">
-                <div class="col-sm-4 border-end border-dark">
-                    <div class="row me-0 ms-0 ps-0">
-                        <div class="col-sm-12 ps-0">
-                            <h5>Image feature Matching</h5>
-                        </div>
-                        <div class="col-sm-12 ps-0">
-                            <p class="text-start fs-6">Mar 2025</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="text-start fs-6">
-                            <span class="fw-bold">Programming Languages:</span> Python
-                        </p>
-                        <p class="text-start fs-6">
-                            <span class="fw-bold">Applications:</span> VScode</p>
-                    </div>
-
-                    <p class="text-start text-danger"> The Source Code is not public due to SFU policy</p>
-
-
-                </div>
-                <div class="col-sm-4">
-                    <div class="ps-3">
-                        <h5>Project Description:</h5>
-                        <p class="text-start fs-6">
-                            The program uses FAST detectors to get key points in images and creates BRIEF descriptors for each point. The keypoints are then compared with the keypoints in a second image using the descriptors to match points. The matched points are used to compute a homography matrix using RANSAC and normilization. The matrix can then be used to map another image on to the instance of the object in the first image.
-                        </p>
-                    </div>
-
-                </div>
-                <div class="col-sm-4 p-2">
-                    <div id="project12" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#project12" data-bs-slide-to="0" class="active"></button>
-                            <button type="button" data-bs-target="#project12" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#project12" data-bs-slide-to="2"></button>
-                        </div>
-                      
-                        <div class="carousel-inner" style="height: 300px;">
-                          <div class="carousel-item active h-100">
-                            <img src="images/visualize_homography_cv_ransac.png" class="d-block w-100 object-fit-cover">
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/visualize_homography_pano_ransac.png" class="d-block w-100 object-fit-cover">
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/composite_harry_potter.png" class="d-block w-100 object-fit-cover">
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#project12" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#project12" data-bs-slide="next">
-                          <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-------------------------------------------------------------------------------------------------------->
-            <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .8;">
-                <div class="col-sm-4 border-end border-dark">
-                    <div class="row me-0 ms-0 ps-0">
-                        <div class="col-sm-12 ps-0">
-                            <h5>Plane Image Segmentation Model</h5>
-                        </div>
-                        <div class="col-sm-12 ps-0">
-                            <p class="text-start fs-6">Mar 2025</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="text-start fs-6">
-                            <span class="fw-bold">Programming Languages:</span> Python
-                        </p>
-                        <p class="text-start fs-6">
-                            <span class="fw-bold">Applications:</span> VScode</p>
-                    </div>
-
-                    <p class="text-start text-danger"> The Source Code is not public due to SFU policy</p>
-
-
-                </div>
-                <div class="col-sm-4">
-                    <div class="ps-3">
-                        <h5>Project Description:</h5>
-                        <p class="text-start fs-6">
-                            The segmentation model involves 2 models. The first model uses <span class="fw-bold">faster_rcnn_R_101_FPN_3x.yaml</span> pretrained model from detection2 library along with additional training for detecting planes from a dataset. This model finds instances of planes in images which are input into the neuron network model which segments the plane from the background. Combined together the models create a segmentation mask for the planes in an input image.
-                        </p>
-                    </div>
-
-                </div>
-                <div class="col-sm-4 p-2">
-                    <div id="project11" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#project11" data-bs-slide-to="0" class="active"></button>
-                            <button type="button" data-bs-target="#project11" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#project11" data-bs-slide-to="2"></button>
-                            <button type="button" data-bs-target="#project11" data-bs-slide-to="3"></button>
-                            <button type="button" data-bs-target="#project11" data-bs-slide-to="4"></button>
-                        </div>
-                      
-                        <div class="carousel-inner" style="height: 300px;">
-                          <div class="carousel-item active h-100">
-                            <img src="images/Part_1_After_Inprovements_3.png" class="d-block w-100 object-fit-cover">
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/Plane_input.png" class="d-block w-100 object-fit-cover">
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/Plane_input_Prediction.png" class="d-block w-100 object-fit-cover">
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/Segmentation_Input.png" class="d-block w-100 object-fit-cover">
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/Segmentation_Input_Prediction.png" class="d-block w-100 object-fit-cover">
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#project11" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#project11" data-bs-slide="next">
-                          <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            
             <!-------------------------------------------------------------------------------------------------------->
             <div class="row bg-light text-black ms-0 me-0 border-dark border-bottom" style="--bs-bg-opacity: .9;">
                 <div class="col-sm-4 border-end border-dark">
