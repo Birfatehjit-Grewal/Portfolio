@@ -1,0 +1,108 @@
+<html lang="en">
+    <head>
+      <title>Reimplementation of Randoop</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body class="bg-dark" style="--bs-bg-opacity: .9;">
+        <div class="container-fluid bg-dark">
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="container-fluid" style="max-width: 1200px;">
+              <a class="navbar-brand" href="index.html">
+                <img src="../images/WEBSITE_LOGO.png" alt="Logo" width="30" height="24">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                MENU
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../bootprojects.html">Projects</a>
+                </li>
+              </ul>
+              </div>
+            </div>
+          </nav>
+
+        </div>
+
+        <div class="container-fluid pt-5 mt-0 mb-0">
+            <div class="container-fluid bg-dark mt-0 mb-0" style="max-width: 1200px;">
+                <H1 class="text-white text-center mt-0 mb-0">Reimplementation of Randoop for .NET</H1>
+            </div>
+            <div class="container-fluid mt-0 mb-0" style="max-width: 1200px;">
+                <div class="row">
+                    <div class="col-sm-8 container-fluid bg-light mt-0 mb-0 pb-3 pt-3" style="max-width: 1200px; --bs-bg-opacity:1;">
+                        <h2 class="mt-0 mb-0">Project Summary</h2>
+                        <p class="mt-0 mb-0">Programming Language: C#</p>
+                        <span class="mt-0 mb-0 pb-3">Libraries/Frameworks: Reflection</span>
+                    </div>
+                    <div class="col-sm-4 container-fluid bg-light mt-0 mb-0 pb-3 pt-3 d-flex justify-content-center" style="max-width: 1200px; --bs-bg-opacity:1; margin: auto;">
+                        <a href="https://github.com/tarasermolenko/Randoop2.0" class="btn btn-dark d-flex align-items-center justify-content-center text-center fw-bold">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+            <div class="container-fluid bg-light mt-0 mb-0" style="max-width: 1200px; --bs-bg-opacity:.8;">
+                <h3 class="mt-0 mb-0">Project Description</h3>
+                <span class="mt-0 mb-0"> This projects goal is to reimplement the core functionality of the RandoopBare command line tool for the newer .NET ecosystem, 
+                    creating a foundation on which a more advanced plug-in tool can be built upon. Manual test creation for unit testing can be an expensive and time-consuming 
+                    task. Automated unit testing enables quick generation of reliable unit tests. Tools like Randoop reduce manual effort of the testing process by automatically 
+                    generating test cases that help uncover edge-case behavior and bugs. Randoop.NET, a powerful automatic unit test generation tool. Was originally developed 
+                    for older versions of the .NET Framework (.NET 4). The repository was last updated over 10 years ago. This open-source version uses depreciated libraries 
+                    and is not compatible with modern .NET assemblies.
+
+                </span>
+                <div class="container-fluid mt-0 mb-0 ps-0">
+                    <h4 class=" mt-0 mb-0">Execution overview</h4> 
+                    <span class="mt-0 mb-0">The Main function takes the DLL you would like to generate tests on, and optionally the path you want to output the tests to, which 
+                        is set to TestLibrary.Tests by default. The DLL is passed to the Test Runner which then calls the DLL collector on it. The Test Runner then creates random 
+                        inputs from and using the information the Reflection API extracts about the DLL, creates XUnit formatted tests.
+                    </span>
+                    <div class="row text-center mt-3 mb-3">
+                        <div class="col-md-12">
+                            <h6>Randoop2.0 Map</h6>
+                            <img src="../images/randoop_overview.png" class="img-fluid rounded shadow-sm" alt="Randoop map">
+                        </div>
+                    </div>
+
+                    <span class="mt-0 mb-0">The test runner creates instances with generated “dummy” arguments as required and prepares method call code by recording variable 
+                        declarations (testVariables.cs) and execution steps. The methods from (MethodToTest.cs) are then invoked, and their return value is validated as pass 
+                        or fail. (TestResult.cs) If the test passes, the runner wraps the instructions into a complete xUnit test method similar to the one shown below. 
+                        Otherwise, it records the reason for failure or skip. Our argument generation supports primitives, strings, arrays, ref/out parameters, and value 
+                        types. 
+                    </span>
+
+                    <div class="row text-center mt-3 mb-3">
+                        <div class="col-md-12">
+                            <h6>Example of generated test</h6>
+                            <img src="../images/Xunit_test_generated.png" class="img-fluid rounded shadow-sm" alt="generated test">
+                        </div>
+                    </div>
+
+                    <span>All the generated tests are saved in the output directory and contain asserts to ensure that the tests work well for regression testing.
+                        The number of tests that are generated is configurable; we set the default to 50 but we left the possibility for future development to change 
+                        the value in the source code.
+                    </span>
+
+                    <div class="row text-center mt-3 mb-3">
+                        <div class="col-md-12">
+                            <h6>Generated tests</h6>
+                            <img src="../images/generated_tests.png" class="img-fluid rounded shadow-sm" alt="generated tests">
+                        </div>
+                    </div>
+                </div>
+
+            
+            </div>
+        </div>
+    </body>
+</html>
