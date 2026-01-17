@@ -1,0 +1,143 @@
+<html lang="en">
+    <head>
+      <title>Dataflow Analysis</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body class="bg-dark" style="--bs-bg-opacity: .9;">
+        <div class="container-fluid bg-dark">
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <div class="container-fluid" style="max-width: 1200px;">
+              <a class="navbar-brand" href="index.html">
+                <img src="../images/WEBSITE_LOGO.png" alt="Logo" width="30" height="24">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                MENU
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../bootprojects.html">Projects</a>
+                </li>
+              </ul>
+              </div>
+            </div>
+          </nav>
+
+        </div>
+
+        <div class="container-fluid pt-5 mt-0 mb-0">
+            <div class="container-fluid bg-dark mt-0 mb-0" style="max-width: 1200px;">
+                <H1 class="text-white text-center mt-0 mb-0">Secure File Transfer over UDP</H1>
+            </div>
+            <div class="container-fluid mt-0 mb-0" style="max-width: 1200px;">
+                <div class="row">
+                    <div class="col-sm-8 container-fluid bg-light mt-0 mb-0 pb-3 pt-3" style="max-width: 1200px; --bs-bg-opacity:1;">
+                        <h2 class="mt-0 mb-0">Project Summary</h2>
+                        <p class="mt-0 mb-0">Programming Language: Python</p>
+                        <span class="mt-0 mb-0 pb-3">Libraries/Frameworks: <a href="https://github.com/soot-oss/soot">Socket</a></span>
+                    </div>
+                    <div class="col-sm-4 container-fluid bg-light mt-0 mb-0 pb-3 pt-3 d-flex justify-content-center" style="max-width: 1200px; --bs-bg-opacity:1; margin: auto;">
+                        <a href="https://github.com/Birfatehjit-Grewal/SecureFileTransfer" class="btn btn-dark d-flex align-items-center justify-content-center text-center fw-bold">Source Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+            <div class="container-fluid bg-light mt-0 mb-0" style="max-width: 1200px; --bs-bg-opacity:.8;">
+                <h3 class="mt-0 mb-0">Project Description</h3>
+                <span class="mt-0 mb-0"> I designed and implemented a custom secure file transfer protocol that provides reliable, authenticated, 
+                    and encrypted communication over UDP. The project reimplements core TCP reliability mechanisms at the application layer while 
+                    integrating modern cryptographic techniques to ensure confidentiality, integrity, and authentication.
+                </span>
+                <div class="container-fluid mt-0 mb-0 ps-0">
+                    <div class="container-fluid mt-0 mb-0 ps-0">
+                        <h4 class=" mt-0 mb-0">Reliable Transport over UDP</h4> 
+                        <div>
+                            <span class="mt-1 mb-1 ps-0">The protocol builds a simplified TCP-like transport layer on top of UDP to achieve reliable data transfer. 
+                            It uses a byte-oriented sequence number system and a fixed-size sliding window to control flow and limit the number of outstanding 
+                            packets. Reliability is achieved through acknowledgment-based delivery, fast retransmission triggered by three duplicate ACKs, and 
+                            timeout-based retransmission for lost packets. These mechanisms allow the protocol to tolerate packet loss, reordering, and 
+                            duplication while maintaining correct file reconstruction.
+                            </span>
+                        </div>
+                        <div>
+                            <span class="mt-1 mb-1 ps-0">A modified three-way handshake establishes the connection. The server creates a half-open connection upon receiving 
+                            a SYN packet from the client and responds with a SYN+ACK. The connection is fully established only after the client sends its next packet, 
+                            mirroring TCP's connection semantics while allowing additional data to be exchanged during setup.
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="container-fluid mt-0 mb-0 ps-0">
+                        <h4 class=" mt-0 mb-0">Custom Packet Format</h4> 
+                        <div>
+                            <span class="mt-1 mb-1 ps-0">The protocol defines a custom TCP-style header that includes source and destination IP addresses, ports, control flags, 
+                                sequence and acknowledgment numbers, and a checksum for error detection. Sequence numbers are byte-based and offset to account for handshake 
+                                packets. A checksum is computed over the entire packet to detect transmission errors caused by bit corruption.
+                            </span>
+                        </div>
+
+                        <div class="row text-center mt-3 mb-3">
+                            <div class="col-md-12">
+                                <h6>Header Format</h6>
+                                <img src="../images/HeaderFormat.png" class="img-fluid rounded shadow-sm" alt="Packet header format">
+                            </div>
+                        </div>
+                            
+                    </div>
+                    
+                    <div class="container-fluid mt-0 mb-0 ps-0">
+                        <h4 class=" mt-0 mb-0">Secure Key Exchange</h4>
+                        <div>
+                            <span class="mt-1 mb-1 ps-0">Session keys are derived using a pre-shared key and two nonces exchanged during the handshake. The client generates a nonce 
+                                and sends it with the initial SYN packet, and the server responds with its own nonce. Both parties independently derive identical session keys 
+                                without ever transmitting them over the network. This design ensures that encryption and integrity keys remain confidential even if packets are 
+                                intercepted.
+                            </span>
+                        </div>
+                        <div>
+                            <span class="mt-1 mb-1 ps-0">The derived session keys include a 128-bit encryption key for data confidentiality and a 256-bit HMAC key for integrity 
+                                verification.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid mt-0 mb-0 ps-0">
+                        <h4 class=" mt-0 mb-0">Confidentiality</h4>
+                        <div>
+                            <span class="mt-1 mb-1 ps-0">All file data is encrypted on a per-packet basis using AES-128 in CBC mode. Each packet includes a fresh initialization vector (IV), 
+                                which is transmitted alongside the encrypted payload. This prevents pattern leakage across packets and ensures semantic security for the transferred 
+                                data.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid mt-0 mb-0 ps-0">
+                        <h4 class=" mt-0 mb-0">Integrity and Authentication</h4>
+                        <div>
+                            <span class="mt-1 mb-1 ps-0">Data integrity is enforced using an HMAC computed over the IV and encrypted payload. The receiver recomputes the HMAC 
+                                and verifies it before accepting any packet data, ensuring that tampering or corruption is detected immediately.
+                            </span>
+                        </div>
+
+                        <div>
+                            <span class="mt-1 mb-1 ps-0">Authentication is integrated into the handshake using the pre-shared key and exchanged nonces. Both client and server 
+                                verify each other's authenticity before transitioning to an established connection state, preventing unauthorized peers from participating in 
+                                the file transfer.
+                            </span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
